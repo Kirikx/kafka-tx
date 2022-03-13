@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+  kafka:
+    producer:
+      bootstrap-servers: 'localhost:9092'
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      # Transactional
+#      transaction-id-prefix: tx-
+#      properties:
+#        enable.idempotence: true
+#        transactional.id: tran-id-1
+    consumer:
+      properties:
+        spring.json.trusted.packages: "*"
+      bootstrap-servers: 'localhost:9092'
+      auto-offset-reset: earliest
+      group-id: group_id
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      # Transactional
+#      enable-auto-commit: false
+#      isolation-level: read_committed
+
+server:
+  port: 8080
