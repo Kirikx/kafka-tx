@@ -8,11 +8,11 @@ spring:
     show-sql: true
     generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: create # drop data at run app
     database: postgresql
   kafka:
     producer:
-      bootstrap-servers: 'localhost:9092'
+      bootstrap-servers: localhost:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       # Transactional
@@ -23,7 +23,7 @@ spring:
     consumer:
       properties:
         spring.json.trusted.packages: "*"
-      bootstrap-servers: 'localhost:9092'
+      bootstrap-servers: localhost:9092
       auto-offset-reset: earliest
       group-id: group_id
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer

@@ -30,8 +30,9 @@ public class ProducerService {
 
     kafkaTemplate.send(TOPIC, message);
 
-//    Thread.sleep(3000);
+    // Error in post process
 //    log.info("Post process");
+//    Thread.sleep(1000);
 //    throw new RuntimeException();
   }
 
