@@ -10,10 +10,10 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 public class AppConfig {
 
   // Kafka transactional
-//  @Bean
-//  @Primary
-//  public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
-//    return new JpaTransactionManager(entityManagerFactory);
-//  }
+  @Bean
+  @Primary
+  public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
+    return new JpaTransactionManager(entityManagerFactory);
+  }
 
 }

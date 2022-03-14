@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.2" ID="118842EF-DCBB-43B7-B02F-4100425C9815">
+    <Notes>
+        <Note ID="4" FontSize="12.0" Position="38.459717,81.969574" Width="85.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Produce app</String>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="524.0,76.0" Width="91.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Consume app</String>
+        </Note>
+        <Note ID="8" FontSize="12.0" Position="392.087646,412.613098" Width="47.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Kafka</String>
+        </Note>
+        <Note ID="10" FontSize="12.0" Position="110.0,414.0" Width="33.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>DB</String>
+        </Note>
+        <Note ID="12" FontSize="12.0" Position="673.609131,416.184082" Width="33.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>DB</String>
+        </Note>
+        <Note ID="13" FontSize="12.0" Position="69.0,113.0" Width="197.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>EXAMPLE:
+
+void process(Messsage msg) {
+// 1
+    saveMessageInDb(msg);
+// 2
+    kafka.send(«messages», msg);
+// 3
+    postProcess(msg);
+}</String>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="559.0,112.0" Width="218.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>EXAMPLE:
+
+@KafkaListener(topics = "messages")
+void consume(Messsage msg) {
+    saveMessageInDb(msg);
+}</String>
+        </Note>
+    </Notes>
+    <BackgroundShapes>
+        <Shape ID="2" Sticky="No" Position="30.369385,74.0" Width="290.313965" Height="209.0">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <ConnectedNoteIDs>7, 9</ConnectedNoteIDs>
+        </Shape>
+        <Shape ID="5" Sticky="No" Position="516.260742,65.825836" Width="300.0" Height="219.174164">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <ConnectedNoteIDs>7, 11</ConnectedNoteIDs>
+        </Shape>
+        <Shape ID="7" Sticky="No" Position="334.407715,397.540955" Width="158.0" Height="49.619904">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <ConnectedNoteIDs>2, 5</ConnectedNoteIDs>
+        </Shape>
+        <Shape ID="9" Sticky="No" Position="51.870361,398.630615" Width="158.0" Height="49.619904">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+        </Shape>
+        <Shape ID="11" Sticky="No" Position="615.479492,400.814697" Width="158.0" Height="49.619904">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <ConnectedNoteIDs>5</ConnectedNoteIDs>
+        </Shape>
+    </BackgroundShapes>
+    <AutoFit>4, 6, 8, 10, 12-14</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="DC55F80E-EC3F-4B88-866E-286EB4AA36EA" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.668962 0.810287 0.895092</BorderColor>
+            <FillColor>0.743291 0.900319 0.994547</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="0004FA5E-4D56-4423-AE89-C4ADF6779835" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.669404 0.885265 0.567007</BorderColor>
+            <FillColor>0.743783 0.983628 0.630008</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="5FC72E2D-E68A-4D68-963E-41F7405479C1" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.894547 0.707772 0.715904</BorderColor>
+            <FillColor>0.989115 0.814114 0.999483</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="D52B995C-601A-4097-ADB8-5552CAEB674C" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.894547 0.707772 0.715904</BorderColor>
+            <FillColor>0.993942 0.786413 0.795449</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="F39264EC-0747-4E2E-BE36-03D10FC45D8A" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.877748 0.828289 0.562126</BorderColor>
+            <FillColor>0.975275 0.920321 0.624585</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="1A3654BF-9380-4E65-A379-58531D5E56B6" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985954 0.0 0.02694</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="9A944BAA-F7A4-4B04-B8F2-056CD204A998" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999763 0.988395 0.949915</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <NoteXPadding>8.0</NoteXPadding>
+    </UISettings>
+    <PrintSettings PaperSize="595.0,842.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>
