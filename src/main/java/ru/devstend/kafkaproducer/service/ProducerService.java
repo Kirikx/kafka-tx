@@ -21,7 +21,6 @@ public class ProducerService {
   private final MessageRepository messageRepository;
 
   @Transactional
-  @SneakyThrows
   public void produce(MessageDto message) {
 
     saveMessage(message);
@@ -30,10 +29,7 @@ public class ProducerService {
 
     kafkaTemplate.send(TOPIC, message);
 
-    // Error in post process
-//    log.info("Post process");
-//    Thread.sleep(1000);
-//    throw new RuntimeException();
+    postProcess(message);
   }
 
   private MessageEntity saveMessage(MessageDto message) {
@@ -45,6 +41,15 @@ public class ProducerService {
     messageEntity.setAmount(message.getAmount());
 
     return messageRepository.save(messageEntity);
+  }
+
+  @SneakyThrows
+  private void postProcess(MessageDto message) {
+    // Error in post process
+
+    log.info("Post process");
+    Thread.sleep(1000);
+    throw new RuntimeException();
   }
 
 }
